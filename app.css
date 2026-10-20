@@ -18,7 +18,7 @@ html {
     --text-2xl: 2.4rem;
     --text-3xl: 3.2rem;
     --text-4xl: 4rem;
-    --text-5xl: 4.8rem;
+    --text-5xl: 6.2rem;
 
     /* FONT WEIGHTS */
     --font-regular: 400;
@@ -47,6 +47,7 @@ html {
 body{
     font-family: var(--font-family);
     background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 h1{
@@ -76,20 +77,35 @@ p{
 a{
     font-size: var(--text-sm);
     text-decoration: none;
+    display: inline-block;
+    color: var(--color-text)
 }
 
 ul{
     list-style: none;
 }
 
-.nav-bar{
-    width: 90%;
-    height: 7rem;
+header{
+    margin-bottom: 4rem;
+    width: 80%;
+    height: 8rem;
     padding: 2rem 0;
     margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.nav-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.horizontal-divider{
+    background-color: var(--color-border);
+    width: 100%;
+    margin: 0 auto;
+    height: 2px;
 }
 
 .logo{
@@ -127,9 +143,86 @@ ul{
     background-color: var(--color-text-muted);
 }
 
+
+.display-button{
+    padding: 0.5rem 1rem;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+    margin-bottom: 2rem;
+}
+
+.display-button svg{
+    width: var(--text-sm);
+}
+
 .btn{
     padding: 1rem 2rem;
     border-radius: 10px;
+    border: 1px solid var(--gradient-primary);
+}
+
+.btn-primary{
     color: var(--color-text);
     background: var(--gradient-primary);
+}
+
+.btn-secondary{
+    background-color: transparent;
+    border: 1px solid var(--color-text)
+}
+
+.btn-wide{
+    padding: 1.5rem 4rem;
+    border-radius: 15px;
+}
+
+.main-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero-section{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 2rem;
+    height: calc(100vh, )
+}
+
+.hero-section-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section-img{
+    width: 100%;
+}
+
+.heading-text{
+    margin-bottom: 1.5rem;
+}
+
+.heading-span{
+    background-image: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.heading-paragraph{
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin-bottom: 2rem;
+}
+
+.buttons-hero-section{
+    display: flex;
+    gap: 2rem;
 }
